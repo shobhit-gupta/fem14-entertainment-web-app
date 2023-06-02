@@ -1,0 +1,19 @@
+services:
+  entertainment-web:
+    build: ./
+    stdin_open: true
+    tty: true
+    container_name: entertainment-web-app
+    ports:
+      - '10013:4173'
+      - '11013:5173'
+    volumes:
+      - ./:/app
+      - entertainment-web-nm:/app/node_modules
+volumes:
+  entertainment-web-nm:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./node_modules
