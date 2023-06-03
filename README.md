@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-<!-- -   Solution URL: [Github Repo](https://github.com/shobhit-gupta/fem13-testimonials)
--   Live Site URL: [https://fem13-testimonials.vercel.app](https://fem13-testimonials.vercel.app) -->
+-   Solution URL: [Github Repo](https://github.com/shobhit-gupta/fem14-entertainment-web-app)
+-   Live Site URL: [https://fem13-testimonials.vercel.app](https://fem13-testimonials.vercel.app)
 
 ## My process
 
