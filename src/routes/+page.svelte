@@ -1,1 +1,3 @@
-<div class="flex min-h-screen items-center justify-center text-5xl">Entertainment Web App</div>
+<div class="m-6 flex min-h-screen items-center justify-center text-center text-3xl text-white">
+	Entertainment Web App
+</div>
