@@ -18,11 +18,19 @@
 
 <nav>
 	<img src="/assets/logo.svg" alt="" class="nav__logo" />
-	<div class="flex gap-6 md:gap-8 lg:basis-3/4 lg:flex-col lg:gap-10">
-		<img src="/assets/icon-nav-home.svg" alt="" class="nav__icon" />
-		<img src="/assets/icon-nav-movies.svg" alt="" class="nav__icon" />
-		<img src="/assets/icon-nav-tv-series.svg" alt="" class="nav__icon" />
-		<img src="/assets/icon-nav-bookmark.svg" alt="" class="nav__icon" />
+	<div class="flex gap-6 md:gap-8 xl:basis-3/4 xl:flex-col xl:gap-10">
+		<a href="/">
+			<img src="/assets/icon-nav-home.svg" alt="" class="nav__icon" />
+		</a>
+		<a href="/movies">
+			<img src="/assets/icon-nav-movies.svg" alt="" class="nav__icon" />
+		</a>
+		<a href="/tv-series">
+			<img src="/assets/icon-nav-tv-series.svg" alt="" class="nav__icon" />
+		</a>
+		<a href="/bookmarks">
+			<img src="/assets/icon-nav-bookmark.svg" alt="" class="nav__icon" />
+		</a>
 	</div>
 	<div class="nav__avatar">
 		<img src="/assets/image-avatar.png" alt="" />
@@ -45,12 +53,12 @@
             md:top-6
             md:rounded-[10px]
             md:p-6
-            lg:inset-y-8
-            lg:left-8
-            lg:right-auto
-            lg:flex-col
-            lg:rounded-[20px]
-            lg:p-8;
+            xl:inset-y-8
+            xl:left-8
+            xl:right-auto
+            xl:flex-col
+            xl:rounded-[20px]
+            xl:p-8;
 	}
 
 	.nav__logo {
@@ -69,7 +77,7 @@
             ring-white
             md:h-8
             md:w-8
-            lg:h-10
-            lg:w-10;
+            xl:h-10
+            xl:w-10;
 	}
 </style>
