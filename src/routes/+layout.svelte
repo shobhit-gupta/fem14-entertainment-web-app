@@ -37,7 +37,44 @@
 	</div>
 </nav>
 
-<slot />
+<!-- <div class="flex min-h-screen flex-col px-4 pb-14 pt-20 md:px-6 md:pt-32 xl:pl-40 xl:pr-9 xl:pt-16">
+	<form method="get" class="flex gap-4 bg-red md:gap-6">
+		<label for="search" class="h-6 w-6 md:h-8 md:w-8">
+			<img src="/assets/icon-search.svg" alt="" />
+		</label>
+		<input type="search" name="search" id="search" class="basis-full" />
+	</form>
+
+	<div class="grow bg-green-300">
+    </div>
+</div> -->
+
+<div class="content-container">
+	<form method="get" class="items-top flex gap-4 md:gap-6">
+		<label for="search" class="w-6 md:w-8">
+			<img src="/assets/icon-search.svg" alt="" />
+		</label>
+		<input
+			type="search"
+			name="search"
+			id="search"
+			class="
+				display-m
+				basis-full
+				border-b-2
+				border-grayishBlue
+				bg-transparent
+				pb-4
+				text-white
+				placeholder:text-white/50
+				placeholder-shown:border-transparent
+				focus:outline-none
+			"
+			placeholder="Search for TV series"
+		/>
+	</form>
+	<slot />
+</div>
 
 <style lang="postcss">
 	nav {
@@ -79,5 +116,8 @@
             md:w-8
             xl:h-10
             xl:w-10;
+	}
+	.content-container {
+		@apply h-screen px-4 pb-14 pt-20 md:px-6 md:pt-32 xl:pl-40 xl:pr-9 xl:pt-16;
 	}
 </style>

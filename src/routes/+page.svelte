@@ -1,3 +1,3 @@
-<div class="mx-6 flex min-h-screen items-center justify-center text-center text-3xl text-white">
+<div class="flex min-h-full items-center justify-center bg-red text-center text-3xl text-white">
 	Home
 </div>
