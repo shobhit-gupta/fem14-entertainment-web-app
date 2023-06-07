@@ -5,7 +5,17 @@
 
 	<article class="body-sm card w-72">
 		<div class="card__img-wrapper">
-			<img src="/assets/thumbnails/beyond-earth/regular/large.jpg" alt="" />
+			<picture>
+				<source
+					media="(max-width: 767px)"
+					srcset="/assets/thumbnails/beyond-earth/regular/small.jpg"
+				/>
+				<source
+					media="(max-width: 1279px)"
+					srcset="/assets/thumbnails/beyond-earth/regular/medium.jpg"
+				/>
+				<img src="/assets/thumbnails/beyond-earth/regular/large.jpg" alt="" />
+			</picture>
 		</div>
 		<div class="card__info-container">
 			<div class="flex gap-2 opacity-75">
@@ -21,9 +31,16 @@
 			<h4 class="display-xs">Beyond Earth</h4>
 		</div>
 	</article>
+
 	<article class="body-md trending card w-[470px]">
 		<div class="card__img-wrapper">
-			<img src="/assets/thumbnails/beyond-earth/trending/large.jpg" alt="" />
+			<picture>
+				<source
+					media="(max-width: 767px)"
+					srcset="/assets/thumbnails/beyond-earth/trending/small.jpg"
+				/>
+				<img src="/assets/thumbnails/beyond-earth/trending/large.jpg" alt="" />
+			</picture>
 		</div>
 		<div class="card__info-container">
 			<div class="flex gap-2 opacity-75">
