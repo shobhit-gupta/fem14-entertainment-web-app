@@ -2,11 +2,12 @@
 	class="flex min-h-full flex-col items-center justify-center gap-12 bg-red text-center text-3xl text-white"
 >
 	<p>Home</p>
-	<article class="body-s grid w-72 grid-cols-1 space-y-2 text-left leading-tight">
-		<div class="overflow-hidden rounded-lg">
+
+	<article class="body-sm card w-72">
+		<div class="card__img-wrapper">
 			<img src="/assets/thumbnails/beyond-earth/regular/large.jpg" alt="" />
 		</div>
-		<div class="flex flex-col gap-1">
+		<div class="card__info-container">
 			<div class="flex gap-2 opacity-75">
 				<p>2019</p>
 				<p>&sdot;</p>
@@ -20,13 +21,11 @@
 			<h4 class="display-xs">Beyond Earth</h4>
 		</div>
 	</article>
-	<article class="body-m grid w-[470px] grid-cols-1 space-y-2 text-left leading-tight">
-		<div class="col-start-1 row-span-2 row-start-1 overflow-hidden rounded-lg">
+	<article class="body-md trending card w-[470px]">
+		<div class="card__img-wrapper">
 			<img src="/assets/thumbnails/beyond-earth/trending/large.jpg" alt="" />
 		</div>
-		<div
-			class="col-start-1 row-start-2 flex flex-col gap-1 rounded-b-lg bg-gradient-to-b from-transparent to-black/75 p-6"
-		>
+		<div class="card__info-container">
 			<div class="flex gap-2 opacity-75">
 				<p>2019</p>
 				<p>&sdot;</p>
@@ -41,3 +40,21 @@
 		</div>
 	</article>
 </div>
+
+<style lang="postcss">
+	.card {
+		@apply grid grid-cols-1 space-y-2 text-left leading-tight;
+	}
+	.card__img-wrapper {
+		@apply overflow-hidden rounded-lg;
+	}
+	.trending .card__img-wrapper {
+		@apply col-start-1 row-span-2 row-start-1;
+	}
+	.card__info-container {
+		@apply flex flex-col gap-1;
+	}
+	.trending .card__info-container {
+		@apply col-start-1 row-start-2 rounded-b-lg bg-gradient-to-b from-transparent to-black/75 p-6;
+	}
+</style>

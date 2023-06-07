@@ -25,11 +25,11 @@
 		@apply text-[1.125rem] font-medium leading-tight;
 	}
 
-	.body-m {
+	.body-md {
 		@apply text-[0.9375rem] font-light;
 	}
 
-	.body-s {
+	.body-sm {
 		@apply text-[0.8125rem] font-light;
 	}
 }
