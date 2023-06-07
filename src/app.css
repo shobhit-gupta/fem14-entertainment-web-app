@@ -18,11 +18,11 @@
 	}
 
 	.display-sm {
-		@apply text-2xl font-medium;
+		@apply text-[1.5rem] font-medium leading-tight;
 	}
 
 	.display-xs {
-		@apply text-lg font-medium;
+		@apply text-[1.125rem] font-medium leading-tight;
 	}
 
 	.body-m {
