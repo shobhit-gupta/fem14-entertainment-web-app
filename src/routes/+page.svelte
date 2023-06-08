@@ -3,7 +3,8 @@
 >
 	<p class="text-3xl">Home</p>
 
-	<article class="body-sm card group w-72">
+	<article class="body-sm card w-72">
+		<!-- Card Image -->
 		<div class="card__img-wrapper relative">
 			<picture>
 				<source
@@ -16,9 +17,11 @@
 				/>
 				<img src="/assets/thumbnails/beyond-earth/regular/large.jpg" alt="" />
 			</picture>
+
+			<!-- Play button overlay -->
 			<a href="/">
 				<div
-					class="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+					class="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-200 hover:opacity-100"
 				>
 					<div class="flex items-center gap-5 rounded-full bg-white/25 p-[9px] pr-6">
 						<img src="/assets/icon-play.svg" alt="" />
@@ -26,7 +29,17 @@
 					</div>
 				</div>
 			</a>
+
+			<!-- Bookmark -->
+			<button
+				class="absolute right-2 top-2 rounded-full bg-darkBlue/50 px-2.5 py-[9px] transition-transform duration-300 hover:scale-110 md:right-4 md:top-4 md:hover:scale-125"
+				on:click={() => console.log('Bookmark')}
+			>
+				<img src="/assets/icon-bookmark-empty.svg" alt="" />
+			</button>
 		</div>
+
+		<!-- Card Info -->
 		<div class="card__info-container relative">
 			<div class="flex gap-2 opacity-75">
 				<p>2019</p>
@@ -42,7 +55,7 @@
 		</div>
 	</article>
 
-	<article class="body-md trending card group w-[470px]">
+	<article class="body-md trending card w-[470px]">
 		<div class="card__img-wrapper relative">
 			<picture>
 				<source
@@ -51,9 +64,9 @@
 				/>
 				<img src="/assets/thumbnails/beyond-earth/trending/large.jpg" alt="" />
 			</picture>
-			<a href="/">
+			<a href="/tv-series z-20">
 				<div
-					class="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+					class="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-200 hover:opacity-100"
 				>
 					<div class="flex items-center gap-5 rounded-full bg-white/25 p-[9px] pr-6">
 						<img src="/assets/icon-play.svg" alt="" />
@@ -61,8 +74,14 @@
 					</div>
 				</div>
 			</a>
+			<button
+				class="absolute right-2 top-2 rounded-full bg-darkBlue/50 px-2.5 py-[9px] transition-transform duration-300 hover:scale-110 md:right-6 md:top-4 md:hover:scale-125"
+				on:click={() => console.log('Bookmark')}
+			>
+				<img src="/assets/icon-bookmark-empty.svg" alt="" />
+			</button>
 		</div>
-		<div class="card__info-container relative">
+		<div class="card__info-container relative z-10">
 			<div class="flex gap-2 opacity-75">
 				<p>2019</p>
 				<p>&sdot;</p>
