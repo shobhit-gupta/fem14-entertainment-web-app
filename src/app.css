@@ -18,18 +18,18 @@
 	}
 
 	.display-sm {
-		@apply text-[1.5rem] font-medium leading-tight;
+		@apply text-[0.9375rem] font-medium leading-tight md:text-[1.5rem];
 	}
 
 	.display-xs {
-		@apply text-[1.125rem] font-medium leading-tight;
+		@apply text-[0.875rem] font-medium leading-tight md:text-[1.125rem];
 	}
 
 	.body-md {
-		@apply text-[0.9375rem] font-light;
+		@apply text-[0.75rem] font-light md:text-[0.9375rem] md:leading-tight;
 	}
 
 	.body-sm {
-		@apply text-[0.8125rem] font-light;
+		@apply text-[0.6875rem] font-light md:text-[0.8125rem] md:leading-tight;
 	}
 }
