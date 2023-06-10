@@ -132,6 +132,7 @@
             xl:w-10;
 	}
 	.content-container {
-		@apply h-screen px-4 pb-14 pt-20 md:px-6 md:pt-32 xl:pl-40 xl:pr-9 xl:pt-16;
+		/* @apply h-screen px-4 pb-14 pt-20 md:px-6 md:pt-32 xl:pl-40 xl:pr-9 xl:pt-16; */
+		@apply h-screen pb-14 pl-4 pt-20 md:pl-6 md:pt-32 xl:pl-40 xl:pt-16;
 	}
 </style>

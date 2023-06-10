@@ -3,12 +3,10 @@
 </script>
 
 <article
-	class="card"
+	class="card max-w-[470px]"
 	class:body-sm={!isTrending}
-	class:w-72={!isTrending}
 	class:body-md={isTrending}
 	class:trending={isTrending}
-	class:w-[470px]={isTrending}
 >
 	<!-- Card Image -->
 	<div class="card__img-wrapper">
@@ -53,7 +51,7 @@
 		<!-- Play button overlay -->
 		<a href="/tv-series">
 			<div
-				class="flex h-full items-center justify-center rounded-lg bg-black/50 opacity-0 transition-opacity duration-200 hover:opacity-100"
+				class="flex h-full items-center justify-center rounded-lg bg-black/50 opacity-0 transition-opacity duration-200 hover:opacity-100 active:opacity-100"
 			>
 				<div class="flex items-center gap-5 rounded-full bg-white/25 p-[9px] pr-6">
 					<img src="/assets/icon-play.svg" alt="" />
@@ -64,9 +62,9 @@
 
 		<!-- Bookmark -->
 		<button
-			class={`absolute right-2 top-2 rounded-full bg-darkBlue/50 px-2.5 py-[9px] transition-transform duration-300 hover:scale-110 ${
+			class={`absolute right-2 top-2 rounded-full bg-darkBlue/50 px-2.5 py-[9px] transition-transform duration-300 hover:scale-110 active:scale-110 ${
 				isTrending ? 'md:right-6' : 'md:right-4'
-			} md:top-4 md:hover:scale-125`}
+			} md:top-4 md:hover:scale-125 md:active:scale-125`}
 			on:click={() => console.log('Bookmark')}
 		>
 			<img src="/assets/icon-bookmark-empty.svg" alt="" />
@@ -76,7 +74,7 @@
 
 <style lang="postcss">
 	.card {
-		@apply grid grid-cols-1 text-left;
+		@apply grid grid-cols-1 text-left text-white;
 	}
 	.card__img-wrapper {
 		@apply col-start-1 row-start-1 overflow-hidden rounded-lg;
