@@ -2,7 +2,7 @@
 	import Card from '$lib/UI/Card.svelte';
 </script>
 
-<div>
+<section class="mt-3 md:mt-5">
 	<h3 class="display-l text-white">Trending</h3>
 	<div class="relative">
 		<div
@@ -29,5 +29,5 @@
 		</div>
 		<div class="to- absolute right-0 top-0 h-full w-6 bg-gradient-to-l from-darkBlue/75" />
 	</div>
-</div>
+</section>
 <div class="mr-4 mt-10 bg-blue-400 md:mr-6 xl:mr-9">Recommended For you</div>
