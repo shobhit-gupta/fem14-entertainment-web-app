@@ -1,32 +1,25 @@
 <script lang="ts">
-	export let isTrending = false;
+	import type { PageData } from '../../routes/$types';
+
+	export let show: PageData['shows'][0];
 </script>
 
 <article
 	class="card max-w-[470px]"
-	class:body-sm={!isTrending}
-	class:body-md={isTrending}
-	class:trending={isTrending}
+	class:body-sm={!show.isTrending}
+	class:body-md={show.isTrending}
+	class:trending={show.isTrending}
 >
 	<!-- Card Image -->
 	<div class="card__img-wrapper">
 		<picture>
-			{#if isTrending}
-				<source
-					media="(max-width: 767px)"
-					srcset="/assets/thumbnails/beyond-earth/trending/small.jpg"
-				/>
-				<img src="/assets/thumbnails/beyond-earth/trending/large.jpg" alt="" />
+			{#if show.isTrending}
+				<source media="(max-width: 767px)" srcset={show.thumbnail.trending?.small} />
+				<img src={show.thumbnail.trending?.large} alt="" />
 			{:else}
-				<source
-					media="(max-width: 767px)"
-					srcset={`/assets/thumbnails/beyond-earth/regular/small.jpg`}
-				/>
-				<source
-					media="(max-width: 1279px)"
-					srcset="/assets/thumbnails/beyond-earth/regular/medium.jpg"
-				/>
-				<img src="/assets/thumbnails/beyond-earth/regular/large.jpg" alt="" />
+				<source media="(max-width: 767px)" srcset={show.thumbnail.regular.small} />
+				<source media="(max-width: 1279px)" srcset={show.thumbnail.regular.medium} />
+				<img src={show.thumbnail.regular.large} alt="" />
 			{/if}
 		</picture>
 	</div>
@@ -34,20 +27,25 @@
 	<!-- Card Info -->
 	<div class="card__info-container mt-2">
 		<div class="flex gap-2 opacity-75">
-			<p>2019</p>
+			<p>{show.year}</p>
 			<p>&sdot;</p>
 			<div class="flex items-center space-x-1.5">
-				<img src="/assets/icon-category-movie.svg" alt="" />
-				<p>Movie</p>
+				<img
+					src={`/assets/icon-category-${
+						show.category.toLowerCase() === 'movie' ? 'movie' : 'tv'
+					}.svg`}
+					alt=""
+				/>
+				<p>{show.category}</p>
 			</div>
 			<p>&sdot;</p>
-			<p>PG</p>
+			<p>{show.rating}</p>
 		</div>
-		<h4 class={isTrending ? 'display-sm' : 'display-xs'}>Beyond Earth</h4>
+		<h4 class={show.isTrending ? 'display-sm' : 'display-xs'}>{show.title}</h4>
 	</div>
 
 	<!-- Overlay -->
-	<div class="relative col-start-1 row-start-1" class:row-span-2={isTrending}>
+	<div class="relative col-start-1 row-start-1" class:row-span-2={show.isTrending}>
 		<!-- Play button overlay -->
 		<a href="/tv-series">
 			<div
@@ -63,11 +61,11 @@
 		<!-- Bookmark -->
 		<button
 			class={`absolute right-2 top-2 rounded-full bg-darkBlue/50 px-2.5 py-[9px] transition-transform duration-300 hover:scale-110 active:scale-110 ${
-				isTrending ? 'md:right-6' : 'md:right-4'
+				show.isTrending ? 'md:right-6' : 'md:right-4'
 			} md:top-4 md:hover:scale-125 md:active:scale-125`}
 			on:click={() => console.log('Bookmark')}
 		>
-			<img src="/assets/icon-bookmark-empty.svg" alt="" />
+			<img src={`/assets/icon-bookmark-${show.isBookmarked ? 'full' : 'empty'}.svg`} alt="" />
 		</button>
 	</div>
 </article>
