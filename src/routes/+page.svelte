@@ -3,12 +3,11 @@
 </script>
 
 <section class="mt-3 md:mt-5">
-	<h3 class="display-l text-white">Trending</h3>
+	<h3 class="display-lg mb-4 text-white">Trending</h3>
 	<div class="relative">
 		<div
 			class="
 				no-scrollbar
-				mt-4
 				grid
 				auto-cols-[70%]
 				grid-flow-col

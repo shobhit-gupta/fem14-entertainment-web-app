@@ -64,8 +64,8 @@
 </nav>
 
 <div class="content-container">
-	<form method="get" class="items-top flex gap-4 md:gap-6">
-		<label for="search" class="w-6 md:w-8">
+	<form method="get" class="flex items-center gap-4 md:gap-6">
+		<label for="search" class="w-6 shrink-0 pb-4 md:w-8">
 			<img src="/assets/icon-search.svg" alt="" />
 		</label>
 		<input
@@ -73,7 +73,7 @@
 			name="search"
 			id="search"
 			class="
-				display-m
+				display-md
 				basis-full
 				border-b-2
 				border-grayishBlue
