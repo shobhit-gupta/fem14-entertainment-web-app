@@ -49,7 +49,7 @@
 	<title>Entertainment web app</title>
 </svelte:head>
 
-<nav>
+<nav class="z-50">
 	<img src="/assets/logo.svg" alt="" class="nav__logo" />
 	<div class="flex gap-6 md:gap-8 xl:basis-3/4 xl:flex-col xl:gap-10">
 		{#each [...routesInfo] as [id, { icon }]}
