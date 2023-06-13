@@ -1,7 +1,5 @@
 <script lang="ts">
-	import type { PageData } from '../../routes/$types';
-
-	export let show: PageData['shows'][0];
+	export let show: Show;
 </script>
 
 <article
