@@ -49,7 +49,7 @@
 	<title>Entertainment web app</title>
 </svelte:head>
 
-<nav>
+<nav class="z-50">
 	<img src="/assets/logo.svg" alt="" class="nav__logo" />
 	<div class="flex gap-6 md:gap-8 xl:basis-3/4 xl:flex-col xl:gap-10">
 		{#each [...routesInfo] as [id, { icon }]}
@@ -64,8 +64,8 @@
 </nav>
 
 <div class="content-container">
-	<form method="get" class="items-top flex gap-4 md:gap-6">
-		<label for="search" class="w-6 md:w-8">
+	<form method="get" class="flex items-center gap-4 md:gap-6">
+		<label for="search" class="w-6 shrink-0 pb-4 md:w-8">
 			<img src="/assets/icon-search.svg" alt="" />
 		</label>
 		<input
@@ -73,7 +73,7 @@
 			name="search"
 			id="search"
 			class="
-				display-m
+				display-md
 				basis-full
 				border-b-2
 				border-grayishBlue
@@ -132,6 +132,7 @@
             xl:w-10;
 	}
 	.content-container {
-		@apply h-screen px-4 pb-14 pt-20 md:px-6 md:pt-32 xl:pl-40 xl:pr-9 xl:pt-16;
+		/* @apply h-screen px-4 pb-14 pt-20 md:px-6 md:pt-32 xl:pl-40 xl:pr-9 xl:pt-16; */
+		@apply h-screen pb-14 pl-4 pt-20 md:pl-6 md:pt-32 xl:pl-40 xl:pt-16;
 	}
 </style>

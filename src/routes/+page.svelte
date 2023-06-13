@@ -1,24 +1,12 @@
 <script lang="ts">
-	import Card from '$lib/UI/Card.svelte';
+	import type { PageData } from './$types';
+	import Shows from '$lib/UI/Shows.svelte';
 
-	let isTrending = true;
+	export let data: PageData;
+
+	const recommended = data.shows?.recommended || [];
+	const trending = data.shows?.trending || [];
 </script>
 
-<div
-	class="
-		flex
-		min-h-full
-		flex-col
-		items-center
-		justify-center
-		gap-12
-		bg-red
-		text-center
-		text-white
-	"
->
-	<p class="text-3xl">Home</p>
-
-	<Card />
-	<Card isTrending />
-</div>
+<Shows heading="Trending" shows={trending} type="Carousel" isDisplayedAtTop />
+<Shows heading="Recommended for you" shows={recommended} />
